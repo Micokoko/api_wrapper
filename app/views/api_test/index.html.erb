@@ -1,0 +1,6 @@
+<!-- app/views/api_test/index.html.erb -->
+
+<h1>API Test - Index</h1>
+<% @games['results'].each do |game| %>
+  <p><%= game['name'] %></p>
+<% end %>
