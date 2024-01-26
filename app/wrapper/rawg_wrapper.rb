@@ -13,4 +13,18 @@ class RawgWrapper
   def self.get_game(id, api_key)
     get("/games/#{id}", query: { key: api_key })
   end
+
+
+  def self.get_platforms(api_key, options = {})
+    query_params = { key: api_key }.merge(options)
+    get('/platforms', query: query_params)
+  end
+
+  
+  def self.get_creators(api_key, options = {})
+    query_params = { key: api_key }.merge(options)
+    get('/creators', query: query_params)
+  end
+
+
 end
